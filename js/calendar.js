@@ -12,9 +12,6 @@ $(function () {
     $('#demo-labels').mobiscroll().calendar({
         display: 'inline',
         labels: [
-            { d: '12/25', text: 'Christmas', color: "#f48fb1" },
-            { d: '1/1', text: 'New year' },
-            { d: '12/1', text: 'Meeting', color: '#ffc400' },
             { d: new Date(now.getFullYear(), now.getMonth() , 4), text: 'Spa day', color: '#cfd8dc' },
             { d: new Date(now.getFullYear(), now.getMonth() + 2, 24), text: 'BD Party', color: '#9ccc65' },
             { d: new Date(now.getFullYear(), now.getMonth() - 2, 13), text: 'Exams', color: '#d4e157' },
@@ -28,7 +25,7 @@ $(function () {
             { d: new Date(now.getFullYear(), now.getMonth(), 11), color: '#f13f77', text: 'Trip' },
             { d: new Date(now.getFullYear(), now.getMonth(), 19), color: '#8dec7d', text: 'Math exam' },
             { d: new Date(now.getFullYear(), now.getMonth(), 28), color: '#ea4986', text: 'Party' },
-            { start: new Date(now.getFullYear(), now.getMonth() + 1, 15), end: new Date(now.getFullYear(), now.getMonth() + 1, 18), text: 'Conference', color: '#f4511e' }
+            
         ]
     });
 
@@ -39,6 +36,7 @@ const app = new Vue({
     data: {
         balanceData:{},
     },
+    
     methods:{
         getBalanceData: function(){
             $.ajax({
