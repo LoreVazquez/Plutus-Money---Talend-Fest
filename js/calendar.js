@@ -31,6 +31,8 @@ $(function () {
 
 });
 
+const token = localStorage.getItem("id_token")
+
 const app = new Vue({
     el: '#vue',
     data: {
@@ -44,7 +46,7 @@ const app = new Vue({
                 type: 'GET',
                 datatype: 'json',
                 headers: {
-                    Authorization: "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik5UUkVSVEkyTWtFeVJFUkdNMEl6UWtVd1JrSXlRa1pFTlRaRU4wSkZSVGM1TmpBMVJqUTFSZyJ9.eyJuaWNrbmFtZSI6InBsdXR1cyIsIm5hbWUiOiJwbHV0dXNAaXRleGljby5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvYzc5YmRjY2ZjMTlhNmJmZGVlMjAyNTgxZDUwMmQ2YjI_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZwbC5wbmciLCJ1cGRhdGVkX2F0IjoiMjAxOC0wOS0xMFQxODo0Mjo0My43ODJaIiwiZW1haWwiOiJwbHV0dXNAaXRleGljby5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9wbHV0dXMtYXBpLWRldi5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWI4ODMzMWYzMjk4OTUxZGFiYWY1NjU5IiwiYXVkIjoiUkpwSGJvVjFnNm13TjFjV3A3b1V2N2hqWUw4NVNOak8iLCJpYXQiOjE1MzY2MDQ5NjMsImV4cCI6MTUzNjY0MDk2M30.hsu95ycRihIl6Sz1kDswh9LNHmI30HAIWEK17sErHWmK5vXOppgrwIEy3suaZmGuYSUZqbrBnCuFBgN0mnokA2Geznn9pr7gDl1Z6Wl00xRDUWM7MZAhaqOaw0mUXENHvbrPMD-JlfGXakAergehS_LoH9dSk21NxAQ2u7ISESpaMA1qwg-XQ0_Hwz4wD8HH9BG7Tltlkhd8hj34SfbKakxT672JwRNrvrncTo23iJ6NnfFHDLzlxxtmDnTDRWhssVtrFoZotrORwf2Da1hOFR85SuJVj0wJtsUr3Yuu-Hk0yYK4VeN2WMMjJV-DZ-f_I7AUQmQ7Xa7vZ6DLtfZIRQ"
+                    Authorization:  `bearer ${token}`
                 }
             })
             .done((response)=>{
