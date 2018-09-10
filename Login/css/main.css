@@ -1,0 +1,24 @@
+/* Elementos que no cambian */
+
+.blueBgD {
+    background: #458aff;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.regularBgD {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btnRound {
+    border-radius: 24px;
+}
+
+
+/* Elementos que cambian */
+
+#loginHeader {
+    height: 15vh;
+    padding-top: 5vh;
+}
