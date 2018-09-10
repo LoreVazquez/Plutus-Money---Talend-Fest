@@ -15,6 +15,13 @@
     border-radius: 24px;
 }
 
+input {
+    background-color: gainsboro;
+    border-style: none; 
+    height: 4vh;
+    width: 100%;
+}
+
 
 /* Elementos que cambian */
 
