@@ -10,12 +10,6 @@ body {
     -webkit-transform: translate(-0%, -0%);
     transform: translate(-0%, -0%);
 }
-/*
-.addIncome {
-    bottom: 3vh;
-    height: 0;
-    width: 5vh;
-}*/
 
 .textDep, .textRet {
     color: white;
@@ -64,13 +58,14 @@ body {
 }
 
 .textMoney {
-    color:rgb(244, 76, 64);
+    color: rgb(244, 76, 64);
 }
+
 
 /*same*/
 
 footer {
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     bottom: 0;
     width: 100%;
     height: 70px;
@@ -152,6 +147,7 @@ footer {
 #menuId:hover {
     background-image: url("../assets/img/menu.png");
 }
+
 
 /* Boton ingreso y egreso */
 

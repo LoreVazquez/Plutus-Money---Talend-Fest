@@ -7,7 +7,7 @@
 }
 
 #btn-gastos {
-    margin: .5em .25em;
+    /* margin: .5em .25em; */
     padding: .625em 1.375em;
     background: #FF5733;
     border: 0;
@@ -38,3 +38,10 @@
     background-color: white;
     color: #3498DB;
 }
+
+.itemDetail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
