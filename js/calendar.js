@@ -5,10 +5,6 @@ mobiscroll.settings = {
 };
 
 $(function () {
-
-    var now = new Date();
-
-
     
     $('#demo-labels').mobiscroll().calendar({
         display: 'inline',
@@ -57,13 +53,18 @@ let getLabel = (summary)=>{
 
         let label = {
             d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
-            text: `$ ${element.Deposit}`,
+            text: ` ${element.Deposit ===0? 'sin transacciones': '$ ' + element.Deposit}`,
             color: '#2ECC71'
         }
         console.log(label)        
         labels.push(label);
     });
     console.log(labels)
+    $('#demo-labels').mobiscroll().calendar({
+        display: 'inline',
+        labels: labels,
+        
+    });
 
 }
 
