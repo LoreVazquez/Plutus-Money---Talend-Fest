@@ -1,22 +1,7 @@
-// $('#datetime').mobiscroll().datetime();
-// labels: [
-//     { d: new Date(now.getFullYear(), now.getMonth() + 1, 4), text: 'Spa day', color: '#cfd8dc' },
-//     { d: new Date(now.getFullYear(), now.getMonth() + 2, 24), text: 'BD Party', color: '#9ccc65' },
-//     { d: new Date(now.getFullYear(), now.getMonth() - 2, 13), text: 'Exams', color: '#d4e157' },
-//     { d: new Date(now.getFullYear(), now.getMonth() - 1, 6), text: 'Trip', color: "#f4511e" }
-// ]
-
 
 mobiscroll.settings = {
     theme: 'ios'
 };
-
-$(function () {
-    
-    
-});
-
-
 
 const token = localStorage.getItem("id_token")
 
@@ -56,31 +41,54 @@ const app = new Vue({
 
 })
 
-let getLabel = (summary,movementType)=>{
-    console.log(summary);
+const getLabel = (summary,movementType)=>{
     let labels=[]
     summary.forEach(element => {
-        let date = new Date(element.Date);
+        const date = new Date(element.Date);
 
-        let label = {
+        const label = {
             d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
-
             text: ` ${element[movementType] ===0? 'sin transacciones': '$ ' + element[movementType]}`,
             color: (movementType == "Deposit")?'#2ECC71': '#EC452E'
 
         }
-        console.log(label)        
         labels.push(label);
     });
+
     $('#demo-labels').mobiscroll().calendar({
         display: 'inline',
         labels: labels,
         onSetDate: function (event, inst) {
             console.log(event.date)
+            list(event.date)
         }
     });
-
 }
+
+const list= (date) => {
+    const d = new Date(date);
+
+    console.log(`${d.getFullYear()}-0${d.getMonth()+1}-${d.getDate()}`)
+
+    $.ajax({
+        url:`https://talentland.azurewebsites.net/api/Receipt/Detail/${d}`,
+        datatype: 'json',
+        headers: {
+            Authorization:  `bearer ${token}`
+        }
+    })
+    .done((response)=>{
+        console.log(response);        
+    })
+    .fail(()=>{
+        console.log("error");
+    })
+}
+
+
+
+
+
 
 
 app.getBalanceData();
