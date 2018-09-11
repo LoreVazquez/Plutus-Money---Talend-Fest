@@ -213,10 +213,10 @@ const list= (date) => {
                  </button>
              </div>
              <div class="modal-body">
-                <ul>
-                 <li><span class="textModalBody">Date:</span>  ${moment(item.TransactionDate).format('DD MMMM YYYY')}</li>
-                 <li><span class="textModalBody">Amount: $ </span>${item.Amount}</li>
-                 <li><span class="textModalBody">Category: </span>${item.Category.Title}</li>
+                <ul style="list-style: none; padding:0;">
+                 <li class="itemDetail" ><span>Date:</span>${moment(item.TransactionDate).format('DD MMMM YYYY')}</li>
+                 <li class="itemDetail"><span>Amount: </span>$ ${item.Amount}</li>
+                 <li class="itemDetail"><span>Category: </span>${item.Category.Title}</li>
                 </ul>
              </div>
              

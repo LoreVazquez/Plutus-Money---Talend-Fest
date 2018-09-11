@@ -38,3 +38,10 @@
     background-color: white;
     color: #3498DB;
 }
+
+.itemDetail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
