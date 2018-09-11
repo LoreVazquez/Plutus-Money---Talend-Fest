@@ -1,4 +1,11 @@
 // $('#datetime').mobiscroll().datetime();
+// labels: [
+//     { d: new Date(now.getFullYear(), now.getMonth() + 1, 4), text: 'Spa day', color: '#cfd8dc' },
+//     { d: new Date(now.getFullYear(), now.getMonth() + 2, 24), text: 'BD Party', color: '#9ccc65' },
+//     { d: new Date(now.getFullYear(), now.getMonth() - 2, 13), text: 'Exams', color: '#d4e157' },
+//     { d: new Date(now.getFullYear(), now.getMonth() - 1, 6), text: 'Trip', color: "#f4511e" }
+// ]
+
 
 mobiscroll.settings = {
     theme: 'ios'
@@ -10,11 +17,7 @@ $(function () {
 
 
     
-    $('#demo-labels').mobiscroll().calendar({
-        display: 'inline',
-        labels: [
-        ]
-    });
+    
 });
 
 
@@ -39,17 +42,25 @@ const app = new Vue({
             })
             .done((response)=>{
                 console.log(response);
-                this.balanceData = response.Data; 
-                getLabel(response.Data.Summary); 
+                this.balanceData = response.Data;
+                this.showDeposits();
+                
             })
             .fail(()=>{
                 console.log("error");
             })
+        },
+        showDeposits: function(){
+            getLabel(this.balanceData.Summary, "Deposit"); 
+        },
+        showWithdrawal: function(){
+            getLabel(this.balanceData.Summary, "Withdrawal"); 
+        }
     }
-    }
+
 })
 
-let getLabel = (summary)=>{
+let getLabel = (summary,movementType)=>{
     console.log(summary);
     let labels=[]
     summary.forEach(element => {
@@ -57,13 +68,16 @@ let getLabel = (summary)=>{
 
         let label = {
             d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
-            text: `$ ${element.Deposit}`,
-            color: '#2ECC71'
+            text: `$ ${element[movementType]}`,
+            color: (movementType == "Deposit")?'#2ECC71': '#EC452E'
         }
         console.log(label)        
         labels.push(label);
     });
-    console.log(labels)
+    $('#demo-labels').mobiscroll().calendar({
+        display: 'inline',
+        labels: labels
+    });
 
 }
 

@@ -17,6 +17,8 @@
                     <div class="mbsc-form-group-title">Income ${{balanceData.Income}}</div>
                     <div class="mbsc-form-group-title">Expensse ${{balanceData.Expense}}</div>
                     <div class="mbsc-form-group-title">Balance ${{balanceData.Balance}}</div>
+                    <a @click='showWithdrawal()' >Gastos</a>
+                    <a @click='showDeposits()'>Ingresos</a>
                     <label>
                         <input id="demo-labels" type="hidden" />
                     </label>
