@@ -1,0 +1,97 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalReg {
+    width: 25vw;
+}
+
+.textDep, .textRet {
+    color: white;
+    background: rgb(38, 166, 154);
+    border-radius: 24px;
+    text-align: center;
+    width: 15vw;
+}
+
+.textRet {
+    background: rgb(244, 76, 64);
+}
+
+.modal-header {
+    padding-top: 3vh;
+    padding-bottom: 1em;
+}
+
+.textModal{
+    color: rgb(185, 185, 185);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    height: 2vh;
+    text-align: center;
+    width: 100%;
+}
+
+.textModalBody{
+    color: rgb(185, 185, 185);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    height: 2vh;
+    text-align: center;
+    padding-top: 5%;
+    width: 100%;
+}
+
+#money {
+    border: none;
+    color: rgb(69, 138, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    height: auto;
+    text-align: right;
+    width: 100%;
+}
+
+/*same*/
+footer {
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+.buttonSearch {
+    background: transparent;
+    color: black;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+.mainHome {
+    background-color: #FAFAFA;
+}
+.btnfooter {
+    margin-left: 19px;
+    background: transparent;
+    border: none;
+}
+.addIncome {
+    height: 8vh;
+    bottom: 4vh;
+    background-color: #458AFF;
+    display: inline-block;
+    border-radius: 50%;
+}
+.addIcon {
+    margin-top: 2.2vh;
+    margin-left: 5.3px;
+}
+#calendarId {
+    background-image: url("../base/assets/img/icons/event_gray.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#calendarId:active {
+    background-image: url("../base/assets/img/icons/event.png");
+}
