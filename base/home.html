@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Links -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <title>Home</title>
 </head>
@@ -18,8 +19,8 @@
         <div class="row">
             <h5 class="col-9 offset-1 text-center regularBgD">Home</h5>
             <button class="buttonSearch">
-                <img class="img-fluid " src="/base/assets/img/search.svg">
-            </button >
+                <img class="img-fluid " src="../base/assets/img/search.svg">
+            </button>
         </div>
     </header>
     <main class="mainHome">
@@ -32,58 +33,55 @@
             </button>
             <span class="col-2 btnfooter">
                 <a href="#" data-link="chart">
-                    <img class="img-fluid" src="/base/assets/img/icons/summary.png">
+                    <img class="img-fluid" src="../base/assets/img/icons/summary.png">
                 </a>
-            </span >
+            </span>
             <div class="col-2 btnfooter addIncome">
                 <a href="#">
-                    <img class="addIcon" src="/base/assets/img/icons/add@2x.png">
+                    <img class="addIcon" src="../base/assets/img/icons/add@2x.png">
                 </a>
             </div>
             <span class="col-2 btnfooter ">
                 <a href="#" data-link="registro" data-toggle="modal" data-target="#registro">
-                    <img class="" src="/base/assets/img/icons/user.png">
+                    <img class="" src="../base/assets/img/icons/user.png">
                 </a>
             </span>
-
+            
             <span class="col-2 btnfooter">
                 <a href="#" data-link="registro" data-toggle="modal" data-target="#registro">
-                    <img class="img-fluid" src="/base/assets/img/icons/menu.png">
+                    <img class="img-fluid" src="../base/assets/img/icons/menu.png">
                 </a>
             </span>
         </div>
-        </footer>
-
-
-
-        <!-- Modal -->
-        <div id="registro" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content modalReg">
-                    <div class="modal-header">
-                        <h5 class="modal-title textModal" id="exampleModalLabel">Registrar transacción</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    </footer>
+    
+    <div id="registro" class="modal fade container-fluid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title textModal" id="exampleModalLabel">Registrar transacción</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <span class="col-2 textModalBody ">MXN</span>
-                            <input id="money" type="number" class="col-9">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn textDep" data-dismiss="modal" onclick="validacion();">Depósito</button>
-                        <button type="button" class="btn textRet" data-dismiss="modal" onclick="validacion();">Retiro</button>
-                    </div>
+                </div>
+                <div class="modal-body">
+                    <span class="textModalBody">MXN</span>
+                    <input id="money" type="number">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary textDep " onclick="validacion();">Depósito</button>
+                    <button type="button" class="btn btn-primary textRet" onclick="validacion();">Retiro</button>
                 </div>
             </div>
         </div>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
         <script src="home.js"></script>
-</body>
-
-</html>
+    </body>
+    
+    </html>

@@ -2,16 +2,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.modalReg {
-    width: 25vw;
-}
-
 .textDep, .textRet {
     color: white;
     background: rgb(38, 166, 154);
     border-radius: 24px;
+    border: none;
     text-align: center;
-    width: 15vw;
+    width: 40vw;
 }
 
 .textRet {
@@ -29,7 +26,6 @@ body {
     font-size: 1em;
     height: 2vh;
     text-align: center;
-    width: 100%;
 }
 
 .textModalBody{
@@ -39,7 +35,7 @@ body {
     height: 2vh;
     text-align: center;
     padding-top: 5%;
-    width: 100%;
+    width: 30%;
 }
 
 #money {
@@ -95,3 +91,32 @@ footer {
 #calendarId:active {
     background-image: url("../base/assets/img/icons/event.png");
 }
+
+
+@media (min-width: 320px) { 
+    .registro {
+        font-size: 0.2rem;
+        width: 230px;
+    }
+}
+
+@media (min-width: 768px) {
+    .registro {
+        font-size: .5rem;
+    }  
+}
+
+@media (min-width: 992px) { 
+    .registro {
+        font-size: 1rem;
+    }   
+}
+
+@media (min-width: 1200px) { 
+    .registro {
+        font-size: 1rem;
+    }  
+}
+
+
+
