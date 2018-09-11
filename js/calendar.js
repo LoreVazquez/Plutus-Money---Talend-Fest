@@ -9,7 +9,9 @@ const app = new Vue({
     el: '#vue',
     data: {
         balanceData:{},
-        labels:[]
+        labels:[],
+        calendar: {},
+        hasExpenses: true,
     },
     
     methods:{
@@ -18,12 +20,13 @@ const app = new Vue({
 
             app.getBalanceData(date.getFullYear(),date.getMonth() +1, function(result){
                 app.balanceData = result;
-                app.showWithdrawal();
+                app.addEvents();
 
                 $('#demo-labels').mobiscroll().calendar({
                     display: 'inline',
                     labels: app.labels,
                     onSetDate: function (event, inst) {
+                        app.calendar = inst;
                         console.log(event.date)
                         list(event.date)
                     },
@@ -32,24 +35,25 @@ const app = new Vue({
                         
                         app.getBalanceData(event.year, event.month+1, function(result){
                             app.balanceData = result;
+                            app.setSummary(app.hasExpenses);
 
-                            for( let i = app.labels.length -1; i >= 0; i--){
-                                app.labels.pop();
-                            }
+                            // for( let i = app.labels.length -1; i >= 0; i--){
+                            //     app.labels.pop();
+                            // }
 
-                            inst.refresh();
+                            // inst.refresh();
 
-                            for( let j =0; j < app.balanceData.Summary.length; j++ ){
-                                let element = app.balanceData.Summary[j];
-                                const date = new Date(element.Date);
-                                app.labels.push({
-                                    d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
-                                    text: ` $ ${element["Withdrawal"]}`,
-                                    color: '#F44336'
-                                });
-                            }
+                            // for( let j =0; j < app.balanceData.Summary.length; j++ ){
+                            //     let element = app.balanceData.Summary[j];
+                            //     const date = new Date(element.Date);
+                            //     app.labels.push({
+                            //         d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
+                            //         text: ` $ ${element["Withdrawal"]}`,
+                            //         color: '#F44336'
+                            //     });
+                            // }
 
-                            inst.refresh();
+                            // inst.refresh();
                         });
 
                         
@@ -78,33 +82,44 @@ const app = new Vue({
                 console.log("error");
             })
         },
-        showDeposits: function(){
-            app.getLabel(this.balanceData.Summary, "Deposit"); 
-        },
-        showWithdrawal: function(){
-            app.getLabel(this.balanceData.Summary, "Withdrawal"); 
-        },
-        getLabel: function(summary,movementType){
-            // debugger;
-            app.labels = [];
-                summary.forEach(element => {
-                    const date = new Date(element.Date);
-            
-                    // if(element[movementType] != 0){
-                    const label = {
-                        d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
-                        text: ` $ ${element[movementType]}`,
-                        color: (movementType == "Deposit")?'#2ECC71': '#F44336'
-            
-                    }
-                    
-                    app.labels.push(label);
-                    
-                    // }
-                });
+        setSummary: function(hasExpenses){
+            app.hasExpenses = hasExpenses;
 
-                
-        }//CIERRA GETLABEL
+            for( let i = app.labels.length -1; i >= 0; i--){
+                app.labels.pop();
+            }
+            
+            app.calendar.refresh();
+            app.addEvents();
+
+            // for( let j =0; j < app.balanceData.Summary.length; j++ ){
+            //     let element = app.balanceData.Summary[j];
+            //     const date = new Date(element.Date);
+            //     app.labels.push({
+            //         d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
+            //         text: ` $ ${element["Withdrawal"]}`,
+            //         color: '#F44336'
+            //     });
+            // }
+
+            app.calendar.refresh();
+        },
+        addEvents: function(){
+            for( let j =0; j < app.balanceData.Summary.length; j++ ){
+                let element = app.balanceData.Summary[j];
+                const date = new Date(element.Date);
+                let amount = app.hasExpenses ? element["Withdrawal"] : element["Deposit"];
+
+                if(amount>0){
+                app.labels.push({
+                    d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
+                    text: ` $ ${amount}`,
+                    color: app.hasExpenses?'#F44336': '#2ECC71'
+                });
+                }
+            }
+        }
+        //CIERRA GETLABEL
 
     }//CIERRA METHODS
 
@@ -202,7 +217,6 @@ const list= (date) => {
                  <li><span class="textModalBody">Date:</span>  ${moment(item.TransactionDate).format('DD MMMM YYYY')}</li>
                  <li><span class="textModalBody">Amount: $ </span>${item.Amount}</li>
                  <li><span class="textModalBody">Category: </span>${item.Category.Title}</li>
-                 <li><span class="textModalBody">Concept: </span${item.Amount}li>
                 </ul>
              </div>
              
