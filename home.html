@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Links -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/mobiscroll.jquery.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/calendar.css">
     <link rel="stylesheet" href="css/home.css">
@@ -16,6 +15,7 @@
 </head>
 
 <body>
+    <!--Header-->
     <header class="col-12">
         <div class="row">
             <h5 class="col-9 offset-1 text-center regularBgD">Home</h5>
@@ -37,20 +37,20 @@
                             <button id="btn-ingresos" type="button" class="col  btnRound btn" @click='setSummary(false)'>Ingresos</button>
                             <button id="btn-gastos" type="button" class="col  btnRound btn  redBgD" @click='setSummary(true)'>Gastos</button>
                         </div>
-
-                        <label>
-                            <input id="demo-labels" type="hidden" />
-                        </label>
-                    </div>
-                </div>
-                <div class="md-groupsort">
-                    <ul id="demo" class="mbsc-cloak"></ul>
-                </div>
+                
+                <div id="demo-labels"></div>
             </div>
         </div>
         <div id="modalItemDetail"></div>
     </main>
-    <footer class="col-12">
+        <div class="md-groupsort">
+            <ul id="demo" class="mbsc-cloak"></ul>
+        </div>
+    
+
+
+    <!--footer-->
+    <footer class="card-footer">
         <div class="row">
             <button class="col-2  btnfooter calendarImage  " id="calendarId">
                 <a href="#" data-link="calendar"></a>
@@ -58,8 +58,7 @@
             <button class="col-2  btnfooter chartImage  " id="chartId">
                 <a href="#" data-link="charts"></a>
             </button>
-            <button class="col-2  btnfooter   rounded-circle addIncome " data-link="registro" data-toggle="modal" data-target="#registro"
-                id="addIncomeId">
+            <button class="col-2  btnfooter   rounded-circle addIncome " data-link="registro" data-toggle="modal" data-target="#registro" id="addIncomeId">
                 <a href="#" data-link="income"></a>
             </button>
             <button class="col-2  btnfooter   " id="userId">
@@ -93,11 +92,9 @@
     </div>
     <script src="js/moment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="mobiscroll/mobiscroll.jquery.min.js"></script>
     <script src="js/calendar.js"></script>

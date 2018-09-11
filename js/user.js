@@ -1,18 +1,15 @@
-
-function validar(){
+function validar() {
     let usuario = document.getElementById('usuario').value;
     let pass = document.getElementById("password").value;
- 
-    if((usuario === "")||(pass === "")){
+
+    if ((usuario === "") || (pass === "")) {
         swal({
             title: "Error!!",
             text: "El usuario y contraseña no pueden estar vacios",
             icon: "warning",
             button: "Aceptar",
-          })
-    }else{
+        })
+    } else {
         authCall(usuario, pass);
     }
- }
-
-
+}
