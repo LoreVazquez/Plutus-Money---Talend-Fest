@@ -45,7 +45,11 @@ body {
     font-size: 2em;
     height: auto;
     text-align: right;
-    width: 100%;
+    width: 70%;
+}
+
+.textMoney {
+    color:rgb(244, 76, 64);
 }
 
 

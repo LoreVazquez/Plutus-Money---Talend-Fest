@@ -30,12 +30,12 @@
         <div class="row">
             <button class="col-2  btnfooter calendarImage  "id="calendarId"><a href="#"data-link="calendar"></a></button>
             <button class="col-2  btnfooter chartImage  " id="chartId"><a href="#"data-link="charts"></a></button>
-            <button class="col-2  btnfooter   rounded-circle addIncome " data-link="registro" data-toggle="modal" data-target="#registro" id="addIncomeId"><a href="#"data-link="income"></a></button>
-            <button class="col-2  btnfooter   " id="userId"><a href="#"data-link="user"></a></button>
-            <button class="col-2  btnfooter   " id="menuId"><a href="#"data-link="menu"></a></button>
+            <button class="col-2  btnfooter rounded-circle addIncome " data-link="registro" data-toggle="modal" data-target="#registro" id="addIncomeId"><a href="#"data-link="income"></a></button>
+            <button class="col-2  btnfooter" id="userId"><a href="#"data-link="user"></a></button>
+            <button class="col-2  btnfooter" id="menuId"><a href="#"data-link="menu"></a></button>
         </div>
     </footer>
-    
+    <!--Modal registro-->
     <div id="registro" class="modal fade container-fluid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -50,19 +50,20 @@
                     <input id="money" type="number">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary textDep " onclick="validacion();">Depósito</button>
-                    <button type="button" class="btn btn-primary textRet" onclick="validacion();">Retiro</button>
+                    <button id="1" type="button" class="btn btn-secondary textDep" onclick="amountEntry();">Depósito</button>
+                    <button id="2" type="button" class="btn btn-primary textRet" onclick="amountEntry();">Retiro</button>
                 </div>
             </div>
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <script src="home.js"></script>
-    </body>
-    
-    </html>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>
