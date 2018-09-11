@@ -6,7 +6,8 @@ body {
     width: 25vw;
 }
 
-.textDep, .textRet {
+.textDep,
+.textRet {
     color: white;
     background: rgb(38, 166, 154);
     border-radius: 24px;
@@ -23,7 +24,7 @@ body {
     padding-bottom: 1em;
 }
 
-.textModal{
+.textModal {
     color: rgb(185, 185, 185);
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
@@ -32,7 +33,7 @@ body {
     width: 100%;
 }
 
-.textModalBody{
+.textModalBody {
     color: rgb(185, 185, 185);
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
@@ -52,7 +53,9 @@ body {
     width: 100%;
 }
 
+
 /*same*/
+
 footer {
     background-color: black;
     position: absolute;
@@ -61,6 +64,7 @@ footer {
     height: 60px;
     color: white;
 }
+
 .buttonSearch {
     background: transparent;
     color: black;
@@ -68,30 +72,71 @@ footer {
     height: 30px;
     width: 30px;
 }
+
 .mainHome {
     background-color: #FAFAFA;
 }
+
 .btnfooter {
-    margin-left: 19px;
+    margin-left: 10px;
     background: transparent;
     border: none;
+    position: relative;
 }
+
 .addIncome {
-    height: 8vh;
-    bottom: 4vh;
-    background-color: #458AFF;
-    display: inline-block;
-    border-radius: 50%;
+    bottom: 3vh;
+    height: 5vh;
+    width: 5vh;
 }
-.addIcon {
-    margin-top: 2.2vh;
-    margin-left: 5.3px;
-}
+
 #calendarId {
     background-image: url("../base/assets/img/icons/event_gray.png");
     background-repeat: no-repeat;
     background-position: center;
 }
-#calendarId:active {
+
+#calendarId:hover {
     background-image: url("../base/assets/img/icons/event.png");
+}
+
+#chartId {
+    background-image: url("../base/assets/img/icons/summary.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#chartId:hover {
+    background-image: url("../base/assets/img/summary.png");
+}
+
+#addIncomeId {
+    background-image: url("../base/assets/img/icons/addcircle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#addIncomeId:hover {
+    background-image: url("../base/assets/img/icons/addcircle.png");
+}
+
+#userId {
+    background-image: url("../base/assets/img/icons/user.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#userId:hover {
+    background-image: url("../base/assets/img/icons/user.png");
+}
+
+#menuId {
+    background-image: url("../base/assets/img/icons/menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#menuId:hover {
+    background-image: url("../base/assets/img/menu.png");
 }
