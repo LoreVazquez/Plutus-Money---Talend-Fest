@@ -2,6 +2,21 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.mbsc-lv-img {
+    position: inherit !important;
+    max-height: 2.5em;
+    max-width: 2.5em;
+    top: 50%;
+    -webkit-transform: translate(-0%, -0%);
+    transform: translate(-0%, -0%);
+}
+/*
+.addIncome {
+    bottom: 3vh;
+    height: 0;
+    width: 5vh;
+}*/
+
 .textDep, .textRet {
     color: white;
     background: rgb(38, 166, 154);

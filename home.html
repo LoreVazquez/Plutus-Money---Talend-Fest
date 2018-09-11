@@ -8,7 +8,7 @@
     <!--Links -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    crossorigin="anonymous">
     <link href="css/mobiscroll.jquery.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/calendar.css">
     <link rel="stylesheet" href="css/home.css">
@@ -28,7 +28,7 @@
         <div class="row">
             <div id="vue">
                 <div mbsc-form class="col-12">
-
+                    
                     <div class="mbsc-form-group">
                         <div class="mbsc-form-group-title">Income ${{balanceData.Income}}</div>
                         <div class="mbsc-form-group-title">Expensse ${{balanceData.Expense}}</div>
@@ -37,7 +37,7 @@
                             <button id="btn-ingresos" type="button" class="col  btnRound btn" @click='showDeposits()'>Ingresos</button>
                             <button id="btn-gastos" type="button" class="col  btnRound btn  redBgD" @click='showWithdrawal()'>Gastos</button>
                         </div>
-
+                        
                         <label>
                             <input id="demo-labels" type="hidden" />
                         </label>
@@ -57,46 +57,46 @@
             <button class="col-2  btnfooter chartImage  " id="chartId">
                 <a href="#" data-link="charts"></a>
             </button>
-            <button class="col-2  btnfooter   rounded-circle addIncome " data-link="registro" data-toggle="modal" data-target="#registro"
-                id="addIncomeId">
-                <a href="#" data-link="income"></a>
-            </button>
-            <button class="col-2  btnfooter   " id="userId">
-                <a href="#" data-link="user"></a>
-            </button>
-            <button class="col-2  btnfooter   " id="menuId">
-                <a href="#" data-link="menu"></a>
-            </button>
-        </div>
-    </footer>
-
-    <div id="registro" class="modal fade container-fluid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title textModal" id="exampleModalLabel">Registrar transacción</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <span class="textModalBody">MXN</span>
-                    <input id="money" type="number">
-                </div>
-                <div class="modal-footer">
-                    <button id="1" type="button" class="btn btn-secondary textDep " onclick="amountEntry();">Depósito</button>
-                    <button id="2" type="button" class="btn btn-primary textRet" onclick="amountEntry();">Retiro</button>
-                </div>
+            <button  class="col-2  btnfooter   rounded-circle addIncome " data-link="registro" data-toggle="modal" data-target="#registro"
+            id="addIncomeId">
+            <a href="#" data-link="income"></a>
+        </button>
+        <button class="col-2  btnfooter   " id="userId">
+            <a href="#" data-link="user"></a>
+        </button>
+        <button class="col-2  btnfooter   " id="menuId">
+            <a href="#" data-link="menu"></a>
+        </button>
+    </div>
+</footer>
+<!--Modal registro-->
+<div id="registro" class="modal fade container-fluid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div id="listCategory" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title textModal" >Registrar transacción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span class="textModalBody">MXN</span>
+                <input id="money" type="number">
+            </div>
+            <div class="modal-footer">
+                <button id="1" type="button" class="btn btn-secondary textDep categories" onclick="amountEntry();">Depósito</button>
+                <button id="2" type="button" class="btn btn-primary textRet categories" onclick="amountEntry();">Retiro</button>
             </div>
         </div>
     </div>
+</div>
     <script src="js/moment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="mobiscroll/mobiscroll.jquery.min.js"></script>
     <script src="js/calendar.js"></script>
