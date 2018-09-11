@@ -74,7 +74,10 @@ let getLabel = (summary,movementType)=>{
     });
     $('#demo-labels').mobiscroll().calendar({
         display: 'inline',
-        labels: labels
+        labels: labels,
+        onSetDate: function (event, inst) {
+            console.log(event.date)
+        }
     });
 
 }
