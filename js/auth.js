@@ -9,9 +9,10 @@ function authCall(usuario, pass) {
             const miStorage = window.localStorage;
             miStorage.setItem("id_token", response.Data.id_token);
             console.log(response)
+            window.location.href = "home.html"
         },
         error: function(error) {
-            console.log("Hubo un error")
+            console.log("Error")
         }
     });
 };
