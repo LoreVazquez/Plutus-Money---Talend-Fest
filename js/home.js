@@ -20,24 +20,26 @@ function amountEntry(){
 
 $("button").click(function (){
     let idButtom = this.id;
-    register.CategoryId = idButtom;
+   register.CategoryId = idButtom;
 
-    $.ajax({
-        url:`https://talentland.azurewebsites.net/api/Category/`+ idButtom,
-        type: 'GET',
-        datatype: 'json',
-        headers: {
-            Authorization:  `bearer ${token}`
-        }
-    })
-    .done((response)=>{
-        console.log(response);
-        category(response);        
-    })
-    .fail(()=>{
-        console.log("error");
-    })
+$.ajax({
+    url:`https://talentland.azurewebsites.net/api/Category/`+ idButtom,
+    type: 'GET',
+    datatype: 'json',
+    headers: {
+        Authorization:  `bearer ${token}`
+    }
+})
+.done((response)=>{
+    console.log(response);
+    category(response);        
+})
+.fail(()=>{
+    console.log("error");
+})
+    
 });
+
 
 function category(response) {
 
