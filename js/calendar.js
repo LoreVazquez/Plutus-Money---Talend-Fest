@@ -59,8 +59,7 @@ const getLabel = (summary,movementType)=>{
         display: 'inline',
         labels: labels,
         onSetDate: function (event, inst) {
-            console.log(event.date);
-            // console.log(moment(event.date).format('YYYY-MM-DD'));
+            console.log(event.date)
             list(event.date)
         }
     });
@@ -69,10 +68,10 @@ const getLabel = (summary,movementType)=>{
 const list= (date) => {
     let d = moment(date).format('YYYY-MM-DD');
     console.log(d);
-    
-
+ 
+ 
     // console.log(`${d.getFullYear()}-0${d.getMonth()+1}-${d.getDate()}`)
-
+ 
     $.ajax({
         url:`https://talentland.azurewebsites.net/api/Receipt/Detail/${d}`,
         datatype: 'json',
@@ -81,34 +80,37 @@ const list= (date) => {
         }
     })
     .done((response)=>{
-        console.log(response.Data); 
-        printingItemList(response.Data);       
+        console.log(response.Data);
+        printingItemList(response.Data);
     })
     .fail(()=>{
         console.log("error");
     })
-}
-
-
-$(function () {
-
+ }
+ 
+ 
+ $(function () {
+ 
     $('#demo').mobiscroll().listview({
         theme: 'ios',
         swipe: false,
         enhance: true
     });
-
-});
-
-
-const printingItemList = function(arrayItems){
+ 
+ });
+ 
+ 
+ const printingItemList = function(arrayItems){
     $('#demo').empty();
     arrayItems.forEach(item =>{
     const itemm = `<li class="item"><div class="rounded-icon" style="background-color:${item.Category.Color};"><img src=${item.Category.Icon}
     class="md-img"/></div>${item.Title}<span class="md-price">$ ${item.Amount}</span></li>`;
     $('#demo').append(itemm);
     })
-}
+ }
+
+
+
 
 
 
