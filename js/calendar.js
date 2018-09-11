@@ -12,10 +12,6 @@ mobiscroll.settings = {
 };
 
 $(function () {
-
-    var now = new Date();
-
-
     
     
 });
@@ -68,8 +64,10 @@ let getLabel = (summary,movementType)=>{
 
         let label = {
             d: new Date(date.getFullYear(), date.getMonth() , date.getDate()),
-            text: `$ ${element[movementType]}`,
+
+            text: ` ${element[movementType] ===0? 'sin transacciones': '$ ' + element[movementType]}`,
             color: (movementType == "Deposit")?'#2ECC71': '#EC452E'
+
         }
         console.log(label)        
         labels.push(label);
