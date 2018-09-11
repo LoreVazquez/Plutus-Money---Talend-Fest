@@ -1,0 +1,40 @@
+.md-groupsort .mbsc-lv .mbsc-lv-item .md-img {
+    border-radius: 40px;
+}
+
+.md-price {
+    float: right;
+}
+
+#btn-gastos {
+    margin: .5em .25em;
+    padding: .625em 1.375em;
+    background: #FF5733;
+    border: 0;
+    border-radius: .25em;
+    color: white;
+}
+
+#btn-ingresos {
+    margin: .5em .25em;
+    padding: .625em 1.375em;
+    background: #2ECC71;
+    border: 0;
+    border-radius: .25em;
+    color: white;
+}
+
+.rounded-icon {
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    margin-right: 10px;
+}
+
+.item {
+    padding: 10px;
+    margin-bottom: 3px;
+    background-color: white;
+    color: #3498DB;
+}

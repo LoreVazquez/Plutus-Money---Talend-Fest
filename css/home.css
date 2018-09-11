@@ -52,15 +52,13 @@ body {
     color:rgb(244, 76, 64);
 }
 
-
 /*same*/
 
 footer {
-    background-color: black;
-    position: absolute;
+    background-color:whitesmoke;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     color: white;
 }
 
@@ -90,52 +88,72 @@ footer {
 }
 
 #calendarId {
-    background-image: url("../base/assets/img/icons/event_gray.png");
+    background-image: url("../assets/img/icons/event_gray.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #calendarId:hover {
-    background-image: url("../base/assets/img/icons/event.png");
+    background-image: url("../assets/img/icons/event.png");
 }
 
 #chartId {
-    background-image: url("../base/assets/img/icons/summary.png");
+    background-image: url("../assets/img/icons/summary.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #chartId:hover {
-    background-image: url("../base/assets/img/summary.png");
+    background-image: url("../assets/img/summary.png");
 }
 
 #addIncomeId {
-    background-image: url("../base/assets/img/icons/addcircle.png");
+    background-image: url("../assets/img/icons/addcircle.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #addIncomeId:hover {
-    background-image: url("../base/assets/img/icons/addcircle.png");
+    background-image: url("../assets/img/icons/addcircle.png");
 }
 
 #userId {
-    background-image: url("../base/assets/img/icons/user.png");
+    background-image: url("../assets/img/icons/user.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #userId:hover {
-    background-image: url("../base/assets/img/icons/user.png");
+    background-image: url("../assets/img/icons/user.png");
 }
 
 #menuId {
-    background-image: url("../base/assets/img/icons/menu.png");
+    background-image: url("../assets/img/icons/menu.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #menuId:hover {
-    background-image: url("../base/assets/img/menu.png");
+    background-image: url("../assets/img/menu.png");
+}
+
+/* Boton ingreso y egreso */
+
+#btn-gastos {
+    margin: .5em .25em;
+    padding: .625em 1.375em;
+    background: #FF5733;
+    border: 0;
+    border-radius: .25em;
+    color: white;
+}
+
+#btn-ingresos {
+    margin: .5em .25em;
+    padding: .625em 1.375em;
+    background: #2ECC71;
+    border: 0;
+    border-radius: .25em;
+    color: white;
 }

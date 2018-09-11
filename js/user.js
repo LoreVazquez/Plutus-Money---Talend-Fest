@@ -2,7 +2,7 @@
 function validar(){
     let usuario = document.getElementById('usuario').value;
     let pass = document.getElementById("password").value;
-            
+ 
     if((usuario === "")||(pass === "")){
         swal({
             title: "Error!!",
@@ -12,7 +12,7 @@ function validar(){
           })
     }else{
         authCall(usuario, pass);
-    } 
-}
+    }
+ }
 
 
